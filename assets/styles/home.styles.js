@@ -45,16 +45,17 @@ export const homeStyles = StyleSheet.create({
   },
   featuredImageContainer: {
     height: 240,
+    borderRadius: 30,
     backgroundColor: COLORS.primary,
     position: "relative",
   },
   featuredImage: {
     width: "100%",
+    borderRadius: 30,
     height: "100%",
   },
   featuredOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.3)",
     justifyContent: "space-between",
     padding: 20,
   },
@@ -97,8 +98,8 @@ export const homeStyles = StyleSheet.create({
     fontWeight: "600",
   },
   recipesSection: {
-    paddingHorizontal: 20,
-    marginTop: 8,
+    paddingHorizontal: 15,
+    marginTop: 4,
   },
   sectionHeader: {
     marginBottom: 16,

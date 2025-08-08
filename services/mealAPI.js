@@ -32,6 +32,7 @@ export const MealAPI = {
     try {
       const response = await fetch(`${BASE_URL}/random.php`);
       const data = await response.json();
+
       return data.meals ? data.meals[0] : null;
     } catch (error) {
       console.error("Error getting random meal:", error);
@@ -46,6 +47,7 @@ export const MealAPI = {
         .fill()
         .map(() => MealAPI.getRandomMeal());
       const meals = await Promise.all(promises);
+
       return meals.filter((meal) => meal !== null);
     } catch (error) {
       console.error("Error getting random meals:", error);
@@ -58,6 +60,7 @@ export const MealAPI = {
     try {
       const response = await fetch(`${BASE_URL}/categories.php`);
       const data = await response.json();
+
       return data.categories || [];
     } catch (error) {
       console.error("Error getting categories:", error);
